@@ -11,9 +11,8 @@ print(lista)
 for i in range(n - 1):
     for j in range(n - 2):
         if lista[j] > lista[j + 1]:
-            m = lista[j]
-            lista[j] = lista[j +1]
-            lista[j + 1] = m
+            # To oczywiście działa, ale w Pythonie istnieje prostszy sposób zamiany miejscami wartości par zmiennych:
+            lista[j], lista[j + 1] = lista[j + 1], lista[j]
 
 print(lista)
 

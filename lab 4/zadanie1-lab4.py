@@ -32,10 +32,8 @@ del slownik1["Marta"]
 print(slownik1)
 
 for i in slownik1:
-    if 20 < slownik1[i] < 50:
-        slownik1[i] = True
-    else:
-        slownik1[i] = False
+    # Wyrażenie "20 < slownik1[i] < 50" zwraca wartość True lub False, więc można jeszcze prościej:
+    slownik1[i] = 20 < slownik1[i] < 50
 
 print(slownik1.items())
 
