@@ -1,2 +1,2 @@
-natalia, zzzz
-ola, zzzz
+Ala,aa
+Ola,oo

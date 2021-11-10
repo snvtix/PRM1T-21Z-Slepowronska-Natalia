@@ -1,4 +1,4 @@
-i = 1
+i = 1 # niepotrzebne, można usunąć
 s = {}
 
 while True:
@@ -17,4 +17,4 @@ with open("zad2.txt", "w") as aaa:
         aaa.write(i)
         aaa.write(",")
         aaa.write(s[i])
-        aaa.write("\n")
+        aaa.write("\n") #ok, można też zapisać w jednej linijce: aaa.write(f'{i},{s[i]}\n')
