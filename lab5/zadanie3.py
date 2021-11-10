@@ -6,5 +6,7 @@ if os.path.isfile("zad2,txt"):
         for i in file:
             i = 0
 
+# kod niedokończony
+
 
 
