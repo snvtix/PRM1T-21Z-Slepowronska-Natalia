@@ -25,7 +25,7 @@ with open("zadanie2.txt", "r+", encoding = "utf-8") as file:
 
 
 # wynik jest dobry, ale zadanie nie dokońca dobrze rozwiązane
-# progtam sam miał wyszukiwać wielkie litery, a nie mieć je na sztywno podane
+# program sam miał wyszukiwać wielkie litery, a nie mieć je na sztywno podane
 # możnaby było to zrealizować np. w następujący sposób:
 
 '''
