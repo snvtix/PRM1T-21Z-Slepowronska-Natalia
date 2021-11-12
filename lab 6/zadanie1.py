@@ -17,6 +17,9 @@ with open("zadanie1.txt", "r+", encoding = "utf-8") as file:
     file.write(h)
 
 
+# wszystko dobrze
+
+
 
 
 
