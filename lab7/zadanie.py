@@ -1,7 +1,7 @@
 import os.path
 
-with open("rozprawa.txt", "r+") as file:
-
+with open("rozprawa.txt", "r+") as file: # skoro nazwa pliku podana przez użytkownika została zdefiniowana jako 'a' to tutaj zamiast "rozprawa.txt" powinno być 'a'
+    # program powinien działać dla każdego pliku jeśli istnieje w katalogu, nie tylko dla rozprawa.txt (co opisano ww komentarzu)
     r = file.read()
     s = {}
 
@@ -32,9 +32,9 @@ with open("rozprawa.txt", "r+") as file:
             print(s)
         elif len(b) == 1:
                 print("liczba wystapienia znaku ", b, ": ", r.count(b))
-        elif len(b) > 1:
+        elif len(b) > 1: # w tej pęli są zliczane również inne znaki niż litery, a w poleceniu było napisane: 'ciągi znaków zawierające wyłącznie litery', a np dla polecenia '**' otrzymujemy wynik 0, co oznacza, że wystąpienie tego ciągu zostało zliczone i liczba tych wystąpień w tekście równa jest 0
             b = b.lower()
-            str = (" " + b + " ")
+            str = (" " + b + " ") # tutaj wyszukuje ciąg znaków jedynie jeśli jest odzielnym słowem, a chodziło o wyszukanie danych ciągów znaków nawet jeśli są częścią dłuższego słowa
             print("liczba wystapienia znakow", b, ": ", z.count(str))
 
 
