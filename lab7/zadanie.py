@@ -7,7 +7,7 @@ with open("rozprawa.txt", "r+") as file:
 
     z = r.lower()
     w = r.split()
-    
+
     for i in w:
         if len(i) > 2:
             if i.isalpha():
