@@ -1,6 +1,8 @@
 import json
 import math
 
+# Wszystko OK
+
 def ot(a, b, c):
     ot = a + b + c
     return ot

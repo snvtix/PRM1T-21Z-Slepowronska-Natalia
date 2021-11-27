@@ -5,10 +5,8 @@ def anagram(a, b):
     d = list(b)
     c.sort()
     d.sort()
-    if c == d:
-        return True
-    else:
-        return False
+    # Można prościej:
+    return c == d
 
 
 x = input("podaj ciag znakow ")
