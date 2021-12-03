@@ -8,7 +8,7 @@ class Ksiazka_telefoniczna:
         self.slownik = {}
 
     def add_record(self, imie, numer):
-        if numer.isdigit(): # 'int' object has no attribute 'isdigit', powinno być: str(numer)
+        if numer.isdigit(): #'int' object has no attribute 'isdigit', powinno być: str(numer)
             if imie in self.slownik.values():
                 print("osoba jest w ksiazce telefonicznej")
             else:
@@ -21,13 +21,13 @@ class Ksiazka_telefoniczna:
         for i in self.slownik:
             print("dane", i, ":", "numer", self.slownik[i])
 
-    def print_json(self, son): # write_json, tak miała nazywać się ta funkcja
-        # self.son = son --> tego brakuje
-        with open(son, "r+") as file: # jeżeli plik nie istnieje otrzymujemy błąd 'No such file or directory' co oznacza, że ta funkcja nie tworzy nowego pliku, tylko szuka go w obecnym katalogu, a powinna tworzyć plik i zapisywać do niego wynik, powinno być open(son, "w")
+    def print_json(self, son): #write_json, tak miała nazywać się ta funkcja
+        #self.son = son --> tego brakuje
+        with open(son, "r+") as file: #jeżeli plik nie istnieje otrzymujemy błąd 'No such file or directory' co oznacza, że ta funkcja nie tworzy nowego pliku, tylko szuka go w obecnym katalogu, a powinna tworzyć plik i zapisywać do niego wynik, powinno być open(son, "w")
             json.dump(self.slownik, file)
 
     def read_json(self, son):
-        with open(son, "r+") as file: # FileNotFoundError: No such file or directory; zła kolejność: funckja powinna najpierw sprawdzać, czy plik istnieje, a potem próbować go otworzyć lub wyświetlać komunikat
+        with open(son, "r+") as file: #FileNotFoundError: No such file or directory; zła kolejność: funkcja powinna najpierw sprawdzać, czy plik istnieje, a potem próbować go otworzyć lub wyświetlać komunika
             if os.path.isfile(son):
                 slownik = json.load(file)
                 for j in slownik:
@@ -55,18 +55,18 @@ if __name__ == "__main__":
     obiekt.read_json(soon)
     obiekt.print_all()
 
-# funkja write_json() mogłaby wyglądać tak:
+#funkja write_json() mogłaby wyglądać tak:
 '''
 def write_json(self, son):
     self.son = son
     with open(self.son, "w") as file:
         json.dump(self.slownik, file)
 '''
-# a jej wywołanie:
+#a jej wywołanie:
 '''
 obiekt.write_json('zadanie.json') 
 '''
-# funckja read_json() mogłaby wyglądać tak:
+#funkcja read_json() mogłaby wyglądać tak:
 '''
 def read_json(self, son):
     if os.path.isfile(son):
@@ -77,11 +77,11 @@ def read_json(self, son):
     else:
         print("plik nie istnieje")
 '''
-# wywołanie funckji read_json():
+#wywołanie funkcja read_json():
 '''
 obiekt.read_json('nowy.json') # plik 'nowy.json' to plik swotrzony ręcznie przechowujący nowy słównik, który zostaje dodany do istniejącego słownika
 '''
-# brak podpunktu f); metody '__add__(self, other); mogłaby np. wyglądać tak:
+#brak podpunktu f); metody '__add__(self, other); mogłaby np. wyglądać tak:
 '''
  def __add__(self, other):
         new = Ksiazka_telefoniczna()
@@ -91,7 +91,7 @@ obiekt.read_json('nowy.json') # plik 'nowy.json' to plik swotrzony ręcznie prze
             new.add_record(record, other.slownik[record])
         return new
 '''
-# testowanie 'if __name__ == "__main__":' jest ok, ale wygodniej byłoby gdyby nie było input() tylko podanie argumentów przy wywołaniu funcji:
+#testowanie 'if __name__ == "__main__":' jest ok, ale wygodniej byłoby gdyby nie było input() tylko podanie argumentów przy wywołaniu funkcji:
 '''
 if __name__ == "__main__:
     obiekt = Ksiazka_telefoniczna()
