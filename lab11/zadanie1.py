@@ -37,21 +37,21 @@ if __name__=='__main__':
 '''
 import os
 
-def file_sizes(path):
+def file_sizes(file_path):
     d = {}
-    if os.path.isdir(path):
-        l = os.listdir(path)
+    if os.path.isdir(file_path):
+        l = os.listdir(file_path)
         for i in l:
-            if os.path.isfile(f"{path}/{i}"):
+            if os.path.isfile(f"{file_path}/{i}"):
                 enl = os.path.splitext(i)
-                size = os.path.getsize(f"{path}/{i}")
+                size = os.path.getsize(f"{file_path}/{i}")
                 if enl[1] in d:
                     d[enl[1]] += size
                 else:
                     d[enl[1]] = size
         return d
     else:
-        assert os.path.isdir(path)
+        assert os.path.isdir(file_path)
 
 
 if __name__ == "__main__":
