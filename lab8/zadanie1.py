@@ -29,12 +29,12 @@ with open("zadanie1.json", "r+") as file:
     s = json.load(file)
     print(s)
 
-    bp1 = s["1bok_prostokąta"]
-    bp2 = s["2bok_prostokąta"]
-    k = s["promień_koła"]
-    bt1 = s["1bok_trójkąta"]
-    bt2 = s["2bok_trójkąta"]
-    bt3 = s["3bok_trójkąta"]
+    bp1 = s["1bok_prostokata"]
+    bp2 = s["2bok_prostokata"]
+    k = s["promien_kola"]
+    bt1 = s["1bok_trojkata"]
+    bt2 = s["2bok_trojkata"]
+    bt3 = s["3bok_trojkata"]
 
     while True:
         a = input("podaj polecenie (o - obwod, p - pole) ")
