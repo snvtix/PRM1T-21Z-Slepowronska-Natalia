@@ -15,12 +15,12 @@ class LatinSquareTests(unittest.TestCase):
         self.assertEqual(l.is_latin(knl), False)
 
     def test_latin_square(self):
-        k=l.latin_square(5)
-        if len(k)==5:
-            return True
-        elif len(k[0])==5:
-            return True
-        else:
-            return False
+        k = l.latin_square(5)
+        # Testy jednostkowe należy realizować za pomocą funkcji rodzaju assertEqual, nie: "if ... return True"
+        self.assertEqual(len(k), 5)
+        self.assertEqual(len(k[0], 5))
         self.assertEqual(l.is_latin(k), True)
 
+# Uruchomienie testów:
+if __name__ == '__main__':
+    unittest.main()
